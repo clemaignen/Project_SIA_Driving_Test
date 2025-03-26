@@ -1,4 +1,5 @@
 # Description: This script contains the function to train the Logit and Probit regression models.
+from typing import Tuple
 import statsmodels.api as sm
 import pandas as pd
 
