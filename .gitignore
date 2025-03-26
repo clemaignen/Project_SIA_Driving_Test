@@ -1,0 +1,52 @@
+# Fichiers de cache Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Notebooks Jupyter ---
+.ipynb_checkpoints/
+
+# Fichiers de log ou de debug
+*.log
+*.pot
+*.mo
+
+# Environnements virtuels
+.env
+.venv
+env/
+venv/
+
+# Données locales
+data/*.xlsm
+data/*.xlsx
+data/*.csv
+!data/.gitkeep  # pour garder le dossier dans Git
+
+# MacOS spécifiques ---
+.DS_Store
+
+# Pytest / couverture ---
+.pytest_cache/
+.coverage
+.cache/
+*.cover
+
+# Outils de type checker ---
+.mypy_cache/
+.pytype/
+.pyre/
+
+# Build / distribution Python ---
+build/
+dist/
+*.egg-info/
+.eggs/
+MANIFEST
+*.spec
+*.egg
+
+# Dossiers de config de projet ---
+.ropeproject
+.spyderproject
+.idea/
