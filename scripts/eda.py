@@ -3,11 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def exploratory_data_analysis(df: pd.DataFrame):
+def exploratory_data_analysis(df: pd.DataFrame) -> None:
     """
-    Performs exploratory data analysis (EDA) on the dataset by generating 
-    descriptive statistics and visualizations of pass rates across year, 
-    age, gender, and location.
+    Generate descriptive stats and visualizations for pass rate trends.
+
+    Args:
+        df (pd.DataFrame): Cleaned dataframe
     """
     print("**Descriptive statistics**")
     print(df.describe())

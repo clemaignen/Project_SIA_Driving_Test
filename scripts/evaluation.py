@@ -4,9 +4,14 @@ import matplotlib.pyplot as plt
 import statsmodels.api as sm
 from sklearn.metrics import roc_curve, auc
 
-def evaluate_models(logit_model, probit_model, df_filtered):
+def evaluate_models(logit_model, probit_model, df_filtered: pd.DataFrame) -> None:
     """
-    Evaluates logit and probit models with ROC curve and interpretation of coefficients.
+    Print summaries and evaluate model performance with ROC.
+
+    Args:
+        logit_model: Trained logistic model
+        probit_model: Trained probit model
+        df_filtered (pd.DataFrame): Data used for evaluation
     """
     # Prepare the explanatory variables (independent variables)
     X = df_filtered[['Location', 'Gender', 'Age']].copy()
@@ -57,10 +62,9 @@ import pandas as pd
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
 
-def predict_probabilities(logit_model):
+def predict_probabilities(logit_model) -> None:
     """
-    Predicts the probability of passing for different candidate profiles
-    using the trained logistic regression model.
+    Predict pass probabilities for different candidate profiles.
     """
     print("**Probability predictions**")
     
@@ -87,10 +91,9 @@ def predict_probabilities(logit_model):
         gender = 'Male' if row['Gender'] == 1 else 'Female'
         print(f"Probability of passing for a {row['Age']}-year-old {gender} at {location}: {row['Predicted_Prob']:.2%}")
 
-def robustness_check(df_filtered, logit_model):
+def robustness_check(df_filtered: pd.DataFrame, logit_model) -> None:
     """
-    Performs a robustness check by re-estimating the logistic regression
-    on a random 80% subsample and comparing coefficients.
+    Run logistic regression on 80% subsample and compare coefficients.
     """
     print("**Robustness test**")
 

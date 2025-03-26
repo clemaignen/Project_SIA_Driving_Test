@@ -38,8 +38,13 @@ def load_data(file_path: str) -> pd.DataFrame:
 
 def preprocess_data(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Preprocess the dataset by pivoting data into long format (per gender), filtering by year,
-    and aggregating for logistic regression modeling.
+    Preprocess dataset into clean long-format structure for modelling.
+
+    Args:
+        df (pd.DataFrame): Raw dataframe.
+
+    Returns:
+        pd.DataFrame: Processed dataframe in long format.
     """
     # Convert columns to numeric where needed
     to_num = ["Age", "Conducted_Male", "Passes_Male", "PassRate_Male",

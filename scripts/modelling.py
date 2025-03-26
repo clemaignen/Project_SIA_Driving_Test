@@ -2,15 +2,15 @@
 import statsmodels.api as sm
 import pandas as pd
 
-def train_models(df_filtered):
+def train_models(df_filtered: pd.DataFrame) -> Tuple[sm.GLM, sm.GLM]:
     """
-    Trains Logit and Probit regression models using Location, Gender, and Age as predictors.
+    Train logistic and probit models on preprocessed data.
 
     Args:
-        df_filtered (pd.DataFrame): Preprocessed dataset with columns Location, Gender, Age, Passes, Failures.
+        df_filtered (pd.DataFrame): Filtered and cleaned data.
 
     Returns:
-        tuple: Fitted Logit and Probit models.
+        tuple: (logit_model, probit_model)
     """
     # 1. Define explanatory variables (X) and target (y)
     X = df_filtered[['Location', 'Gender', 'Age']].copy()
