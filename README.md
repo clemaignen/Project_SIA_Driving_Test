@@ -54,6 +54,9 @@ pip install -r requirements.txt
 
 2. **Add your local Excel data file** (not versioned):
    - Place `DataDSVA_Python.xlsm` inside the `/data` folder.
+    Due to file size constraints, the dataset is not included in this repository.  
+    You can download the Excel data file used in this project via the following link:
+    [Download DataDSVA_Python.xlsm (Google Drive)](https://docs.google.com/spreadsheets/d/1LycoJ3fs-bwtbzsg7o24ldbylAO7rz9l/edit?usp=sharing&ouid=116476783250006256868&rtpof=true&sd=true)
 
 3. **Launch Jupyter Notebook**:
 ```bash
